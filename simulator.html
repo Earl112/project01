@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #5788ae,#77acc5, #BFBDC1);
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height:300px;
+      width: 100px;
+      padding: 20px 0;
+      border-radius: 25px;
+      background-color:#2c3e49;
+    }
+    .traffic-light {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+     
+    }
+    .light {
+      width: 80px;
+      height: 80px;
+      border: 1px solid black;
+      margin: 10px;
+      border-radius: 50%;
+      
+    }
+    .red {
+      background-color:#838383;
+      }
+    .yellow {
+      background-color: #838383;
+      
+    }
+    .green {
+      background-color: #838383;
+    }
+    h1{
+      text-decoration:bold;
+      color:#3E424B;
+      padding:10px 10px 100px 10px;
+      margin-bottom: 20px;
+    }
+    .bottons{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom:150px;
+      padding-top:40px;
+    }
+  </style>
+  <title>Traffic Light Simulator</title>
+</head>
+<body>
+ <h1> Traffic Light Simulator </h1>
+  <div class="container">
+    <div class="traffic-light">
+      <div class="light red" id="red"></div>
+      <div class="light yellow" id="yellow"></div>
+      <div class="light green" id="green"></div>
+    </div>
+  </div>
+<div class="bottons">
+   <button onclick="turnOn()">Turn on</button> &nbsp <button onclick="stopLight()">Stop</button> &nbsp <button onclick="getReadyLight()">Get Ready</button> &nbsp <button onclick="goLight()">Go</button> &nbsp <button onclick="turnOff()">Turn off</button>
+</div>
+    
+
+  <script>
+    function stopLight() {
+      document.getElementById('red').style.background = '#FF4136';
+      document.getElementById('red').style.boxShadow = '0 0 60px 10px #FF4136';
+      document.getElementById('yellow').style.background = '#838383';
+      document.getElementById('yellow').style.boxShadow = '0 0 60px 10px #838383';
+      document.getElementById('green').style.background = '#838383';
+      document.getElementById('green').style.boxShadow = '0 0 60px 10px #838383';
+    }
+
+    function getReadyLight() {
+      document.getElementById('red').style.background = '#838383';
+      document.getElementById('red').style.boxShadow = '0 0 60px 10px #838383';
+      document.getElementById('yellow').style.background = '#FFDC00';
+      document.getElementById('yellow').style.boxShadow = '0 0 60px 10px #FFDC00';
+      document.getElementById('green').style.background = '#838383';
+      document.getElementById('green').style.boxShadow = '0 0 60px 10px #838383';
+    }
+
+    function goLight() {
+      document.getElementById('red').style.background = '#838383';
+      document.getElementById('red').style.boxShadow = '0 0 60px 10px #838383';
+      document.getElementById('yellow').style.background = '#838383';
+      document.getElementById('yellow').style.boxShadow = '0 0 60px 10px #838383';
+      document.getElementById('green').style.background = '#2ECC40';
+      document.getElementById('green').style.boxShadow = '0 0 60px 10px #2ECC40';
+    }
+    function turnOff() {
+      document.getElementById('red').style.background = '#838383';
+      document.getElementById('red').style.boxShadow = '0 0 60px 10px #838383';
+      document.getElementById('yellow').style.background = '#838383';
+      document.getElementById('yellow').style.boxShadow = '0 0 60px 10px #838383';
+      document.getElementById('green').style.background = '#838383';
+      document.getElementById('green').style.boxShadow = '0 0 60px 10px #838383';
+    }
+    function turnOn() {
+      document.getElementById('red').style.background = '#FF4136';
+      document.getElementById('red').style.boxShadow = '0 0 60px 10px #FF4136';
+      document.getElementById('yellow').style.background = '#FFDC00';
+      document.getElementById('yellow').style.boxShadow = '0 0 60px 10px #FFDC00';
+      document.getElementById('green').style.background = '#2ECC40';
+      document.getElementById('green').style.boxShadow = '0 0 60px 10px #2ECC40';
+    }
+  </script>
+</body>
+</html>
